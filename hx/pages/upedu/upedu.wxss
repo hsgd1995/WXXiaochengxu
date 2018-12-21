@@ -1,0 +1,142 @@
+page {
+  height: 100%;
+}
+
+.upeduPage {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.plans {
+  width: 100%;
+  margin: 0 atuo;
+  padding: 50rpx 0 30rpx;
+  text-align: center;
+}
+
+.plan-title {
+  color: #9ea8af;
+  font-size: 40rpx;
+}
+
+.scroll-tab{
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.scroll-tab-item{
+  display: inline-block;
+  box-sizing: border-box;
+  width: 140rpx; 
+  height: 220rpx;
+  color: #5495e6;
+  font-size: 45rpx;
+  padding: 25rpx 20rpx;
+  overflow: hidden;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: #c9e1ff 0px 2px 15px;
+  -moz-box-shadow: #c9e1ff 0px 2px 15px; 
+  box-shadow: #c9e1ff 0px 2px 15px; 
+}
+
+.scroll-tab-item text {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.tab2, .tab3 {
+  padding-top: 55rpx;
+}
+
+.scroll-tab-item:nth-child(2) {
+  margin: auto 50rpx;
+}
+
+.active{
+  width: 160rpx; 
+  height: 240rpx;
+  font-size: 47rpx;
+  color:#5495e6;
+  font-weight: bold;
+  background: #f1f7ff;
+}
+
+/* 文字介绍 */
+swiper {
+  width: 680rpx;
+  height: 480rpx;
+  margin: 50rpx auto 0;
+  overflow: auto;
+}
+
+/* 指示点 */
+.swiper-box .wx-swiper-dots.wx-swiper-dots-horizontal{
+  margin-bottom: 440rpx;
+}
+
+.swiper-box .wx-swiper-dot{
+  display: inline-flex;
+  width: 20rpx;
+  height: 20rpx;
+  -webkit-border-radius: 50%;
+  -moz--border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.swiper-box .wx-swiper-dot::before{
+  content: '';
+  flex-grow: 1; 
+  background: #e0e0e0;
+  -webkit-border-radius: 50%;
+  -moz--border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.swiper-box .wx-swiper-dot-active::before{
+  background: #bed9fc;
+}
+
+.textView text {
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  font-size: 27rpx;
+  text-indent: 2em;
+  text-align: justify;
+  color: #51555b;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
+}
+
+.textView text:nth-child(1) {
+  padding-top: 70rpx;
+}
+
+/* 您当前方案 */
+.bottomText {
+  width: 100%;
+  margin: 0 auto 10rpx;
+  text-align: center;
+}
+
+.bottomText text {
+  color: #89beff;
+  font-size: 30rpx;
+}
+
+.btnView button{
+  display: inline-block;
+  width: 250rpx;
+  background: #5495e6;
+  color: #fff;
+  box-shadow: 6rpx 4rpx 4rpx #c4defe;
+  margin-bottom: 65rpx;
+}

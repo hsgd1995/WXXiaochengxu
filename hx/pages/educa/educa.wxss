@@ -1,0 +1,223 @@
+page {
+  height: 100%;
+}
+
+.educaPage {
+  width: 100%;  height: 100%;
+}
+
+/* 学校简介 */
+.holdview {
+  width: 88%;  height: 210rpx;  margin: 30rpx auto -140rpx;  
+}
+
+.hideview {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  background: #f3f9fe;
+}
+
+.hidecont {
+  width: 95%;  height: 95%;  margin: 0rpx auto; padding-top: 18rpx;
+}
+
+.cerimg {
+  width: 155rpx;  height: 158rpx;  float: left;
+}
+
+.cerimg image {
+  width: 100%;  height: 100%;
+}
+
+.intrcon {
+  float: right;
+  width: 440rpx;
+  height: 154rpx;
+  overflow: hidden;
+}
+
+.intrcon text {
+  text-indent: 2em;
+  text-align: justify;
+  color: #50555b;
+  font-size: 25rpx;
+  display: -webkit-box;   /* 对象作为伸缩盒子模型显示 */
+  word-break: break-all;/* 允许任意非CJK文本间的单词断行 */
+  -webkit-box-orient: vertical; /* 设置或检索伸缩盒对象的子元素的排列方式 */
+  overflow: hidden; /* 超出的文本内容隐藏 */
+}
+
+.lasttext {
+  float: right; color: #9fa8af; font-size: 25rpx;
+}
+
+.lasttext::after {
+  content: "";
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  display: block;
+}
+
+.hidecont::after {
+  display: block;
+  visibility: hidden;
+  content: "";
+  width: 0;
+  height: 0;
+  clear: both;
+}
+
+/* 用户信息 */
+.inforlist {
+  width: 70%;  height: auto;  margin: 0 auto; 
+}
+
+/* 信息框的样式 */
+.inforview {
+  width: 100%;  height: 62rpx;  margin-top: 45rpx;
+}
+
+.picker{
+  width: 400rpx;
+  height: 62rpx;
+  padding-left: 30rpx;
+  border: 2rpx solid #cccccc;
+  color: #7d7d7d;
+  float: right;
+  font-size: 35rpx;
+  line-height: 60rpx;
+}
+
+.inforview::after {
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+input {
+  height: 62rpx;
+  line-height: 62rpx;
+}
+
+label {
+  display: inline-block;
+  height: 62rpx;
+  line-height: 62rpx;
+  margin-bottom: 20rpx;
+  margin-top: 5rpx;
+}
+
+/* 底部按钮 */
+.btngroup {
+  width: 600rpx;  height: auto;  margin: 0 auto 65rpx; 
+}
+
+.btngroup button {
+  display: inline-block;
+  width: 250rpx;
+  background: #5495e6;
+  color: #fff;
+  box-shadow: 6rpx 5rpx 4rpx #c4defe;
+}
+
+.btngroup button:first-child {
+  margin-right: 90rpx;
+}
+
+.hidecont::after {
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  clear: both;
+}
+
+.wiewshow {
+  display: block;
+}
+
+.viewhide {
+  display: none;
+}
+
+/*---------弹出框样式 --------------------------*/
+/*模态框*/
+.modals{
+  position:fixed; 
+  z-index: 999; 
+  top:0; 
+  left: 0; 
+  right:0; 
+  bottom: 0;
+  }
+
+.modals-cancel{
+  position:absolute; 
+  z-index:1000; 
+  top:0; 
+  left: 0; 
+  right:0;
+  bottom: 0; 
+  background-color: rgba(0,0,0,.2);
+  }
+
+/*动画前初始位置*/
+.bottom-pos{
+  -webkit-transform:translateY(100%);
+  transform:translateY(100%);
+  }
+
+/* 学校的整体简介 */
+.schintro {
+  position:absolute; 
+  z-index:10001;
+  width: 85%;
+  height: auto;
+  top: 40rpx;
+  left: 40rpx;
+  padding: 30rpx 18rpx;
+  border-radius: 5%;
+  background: #f3f9fe;
+}
+
+/* logo图居左 */
+.leftimg{
+  width: 155rpx;  height: 158rpx;  float: left; margin-top: 20rpx;
+}
+
+.leftimg image {
+  width: 100%;   height: 100%;
+}
+
+/* 学校简介居右 */
+.righttext {
+  width: 470rpx;   height: auto;   float: right; overflow: hidden;
+}
+
+.righttext text {
+  display: -webkit-box;
+  color: #50555b;
+  text-align: justify;
+  font-size: 29rpx;
+  text-indent: 2em;
+  line-height: 40rpx;
+  word-break: break-all
+}
+
+.righttext .lasttext {
+  float: right;  color: #9fa8af; font-size: 25rpx;
+}
+
+.lasttext::after {
+  content: "";
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  display: block;
+}
+

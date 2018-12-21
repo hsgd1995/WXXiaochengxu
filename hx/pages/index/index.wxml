@@ -1,0 +1,27 @@
+<view class="container indexPage">
+  <image id="coverbg" src="../images/coverbg.png"></image>
+    <!-- 恒信博大教育 -->
+    <view>
+      <text class="t01">{{t01}}</text>
+      <text class="t02">{{t02}}</text>
+    </view>
+    <!-- 公司介绍 -->
+    <view class="compview">
+      <view class="viewleft">
+        <view class="lineleft"></view>
+        <view class="comintro"><text>{{introduce}}</text></view>
+      </view>
+      <view class="lineright"></view>
+    </view>
+    <!-- 简介内容 -->
+    <view class="content">
+      <text>{{con01}}</text>
+      <text>{{con02}}</text>
+      <text>{{con03}}</text>
+    </view>
+  <!-- 底部按钮 -->
+  <view class="btngroup">
+    <button bindtap="upedu">学历提升</button>
+    <button bindtap="train">职业培训</button>
+  </view>
+</view>

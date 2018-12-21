@@ -1,0 +1,42 @@
+<view class="container endingPage">
+  <view class="thanks">
+    <text>感谢您对恒信博大教育的支持
+    我们的老师会尽快与您联系</text>
+  </view>
+
+  <view class="imageview">
+    <image src="../images/smile.png"></image>
+  </view>
+
+  <view class="filedcont">
+    <text bindtap="showModal">钦州区域联系方式</text>
+  </view>
+
+  <view class="phone">
+    <text bindtap="showModal">黄老师</text>
+    <text bindtap="showModal">187 5422 8965</text>
+    <text>南宁市西乡塘区科园大道31号财智时代13楼B座</text>
+  </view>
+
+  <view class="returnbtn">
+    <button bindtap="educa">返回</button>
+  </view>
+</view>
+
+<!-- 各学校招生老师联系号码 -->
+<view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+  <!-- 点击遮罩层关闭弹框 -->
+  <view class="modals-cancel" bindtap="hideModal"></view>
+  <view class="schintro bottom-pos" animation="{{animationData}}">
+    <!-- <view class="closeBtn">&#10005</view> -->
+    <text>黄老师</text>
+    <text class="phoneNum">18754228965</text>
+    <text>黄老师</text>
+    <text class="phoneNum">18754228965</text>
+    <text>黄老师</text>
+    <text class="phoneNum">18754228965</text>
+    <text>黄老师</text>
+    <text class="phoneNum">18754228965</text>
+    <text class="lasttext" bindtap="hideModal">...收缩</text>
+  </view>
+</view>

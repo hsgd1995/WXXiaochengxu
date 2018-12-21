@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/train/train",
+    "pages/educa/educa",
+    "pages/upedu/upedu",
+    "pages/ending/ending"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5495e6",
+    "navigationBarTitleText": "恒信博大教育",
+    "navigationBarTextStyle": "white"
+  }
+}

@@ -1,0 +1,79 @@
+<view class="container educaPage">
+  <!-- 资格证简介 -->
+  <view class="holdview">
+    <!-- 钦州学院 -->
+    <view class="hideview {{showView ? 'viewhide' : 'viewshow'}}">
+      <view class="hidecont" bindtap="showModal">
+        <view class="cerimg">
+          <image src="{{schoolImg}}"></image>
+        </view>
+        <view class="intrcon">
+          <text>{{schoolContent}}</text>
+        </view>
+        <text class="lasttext">...展开</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 报名信息 -->
+  <view class="inforlist">
+    <view class="inforview">
+      <picker bindchange="bindPickerChange" range-key="name" range="{{objectArray}}">
+        <label>学校</label>
+        <view class="picker">{{objectArray[index].name}}</view>
+      </picker>
+    </view>
+    <view class="inforview">
+      <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{kind}}">
+        <label>层次</label>
+        <view class="picker">{{kind[index2]}}</view>
+      </picker>
+    </view>
+    <view class="inforview">
+      <picker bindchange="bindPickerChange3" value="{{index3}}" range="{{profess}}">
+        <label>专业</label>
+        <view class="picker">{{profess[index3]}}</view>
+      </picker>
+    </view>
+    <view class="inforview">
+      <label>姓名</label>
+      <view class="picker">
+        <input type="text" placeholder="请输入名字" name="name" bindinput='getName'></input>
+      </view>
+    </view>
+    <view class="inforview">
+      <label>手机</label>
+      <view class="picker">
+        <input type="number" maxlength="11" placeholder="请输入手机号码" name="phone" bindinput='getPhone'></input>
+      </view>
+    </view>  
+    <view class="inforview">
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <label>区域</label>
+        <view class="picker">
+          {{ multiArray[0][multiIndex[0]] }}{{ multiArray[1][multiIndex[1]] }}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <!-- 底部按钮 -->
+  <view class="btngroup">
+    <button bindtap="indexbtn">返回</button>
+    <button bindtap="submit">提交</button>
+  </view>
+</view>
+
+<!-- 钦州学院弹框 -->
+<view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+  <view class="modals-cancel" bindtap="hideModal"></view>
+  <view class="schintro bottom-pos" animation="{{animationData}}">
+    <view class="leftimg">
+      <image src='{{schoolImg}}'></image>
+    </view>
+    <view class="righttext">
+    <text> {{schoolContent}}</text>
+      <text class="lasttext" bindtap="hideModal">...收缩</text>
+    </view>
+  </view>
+</view>
+

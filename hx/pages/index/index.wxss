@@ -1,0 +1,123 @@
+page {
+  height: 100%;
+}
+
+.indexPage {
+  width: 100%; 
+  height: 100%;
+}
+
+/* 背景图片 */
+#coverbg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  display: block;
+}
+
+.t01 {
+  display: block;
+  font-size: 80rpx;
+  color: #3282e6;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 4rpx 4rpx #fff;
+  margin-top: 25rpx;
+}
+
+.t02 {
+  display: block;
+  font-size: 37rpx;
+  color: #3282e6;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+/* 公司简介 */
+.compview {
+  width: 600rpx;
+  height: 100rpx;
+  margin: 25rpx auto 0;
+}
+
+.viewleft {
+  width: 405rpx;
+  height: 80rpx;
+  float: left;
+}
+
+.lineleft {
+  width: 180rpx;
+  height: 5rpx;
+  background:#7fbcef;
+  margin-top: 45rpx;
+  float: left;
+}
+
+.comintro {
+  width:  205rpx;
+  height: 80rpx;
+  padding-top: 8rpx;
+  float: right;
+}
+
+.comintro text {
+  color: #5495e6;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+
+.lineright {
+  width: 180rpx;
+  height: 5rpx;
+  background:  #7fbcef;
+  margin-top: 45rpx;
+  float: right;
+}
+
+.compview::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  clear: both;
+}
+
+/* 内容介绍 */
+.content {
+  width: 600rpx;
+  height: auto;
+  margin: -10rpx auto 10rpx;
+}
+
+.content text {
+  display: block;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  text-indent: 2em;
+  text-align: justify;
+  color: #50555a;
+}
+
+/* 底部按钮 */
+.btngroup {
+  width: 600rpx;
+  height: auto;
+  margin: 40rpx auto 0;
+}
+
+.btngroup button {
+  display: inline-block;
+  width: 250rpx;
+  background: #5495e6;
+  color: #fff;
+  box-shadow: 6rpx 5rpx 4rpx #fff;
+  margin-bottom: 65rpx;
+}
+
+.btngroup button:first-child {
+  margin-right: 90rpx;
+}
