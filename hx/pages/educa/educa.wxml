@@ -20,19 +20,20 @@
     <view class="inforview">
       <picker bindchange="bindPickerChange" range-key="name" range="{{objectArray}}">
         <label>学校</label>
+       
         <view class="picker">{{objectArray[index].name}}</view>
       </picker>
     </view>
     <view class="inforview">
-      <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{kind}}">
+      <picker bindchange="bindPickerChange2" range-key="levelName" range="{{objectKindArray}}">
         <label>层次</label>
-        <view class="picker">{{kind[index2]}}</view>
+        <view class="picker">{{objectKindArray[index2].levelName}}</view>
       </picker>
     </view>
     <view class="inforview">
-      <picker bindchange="bindPickerChange3" value="{{index3}}" range="{{profess}}">
+      <picker bindchange="bindPickerChange3" range-key="majorName" range="{{objectProfessArray}}">
         <label>专业</label>
-        <view class="picker">{{profess[index3]}}</view>
+        <view class="picker">{{objectProfessArray[index3].majorName}}</view>
       </picker>
     </view>
     <view class="inforview">
@@ -48,10 +49,10 @@
       </view>
     </view>  
     <view class="inforview">
-      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" range-key="name" range="{{objectMultiArray}}">
         <label>区域</label>
         <view class="picker">
-          {{ multiArray[0][multiIndex[0]] }}{{ multiArray[1][multiIndex[1]] }}
+          {{ objectMultiArray[0][multiIndex[0]].name }}{{ objectMultiArray[1][multiIndex[1]].name }}
         </view>
       </picker>
     </view>
