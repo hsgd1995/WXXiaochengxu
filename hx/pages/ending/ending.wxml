@@ -9,12 +9,11 @@
   </view>
 
   <view class="filedcont">
-    <text bindtap="showModal">钦州区域联系方式</text>
+    <text bindtap="showModal">点击查看钦州区域联系方式</text>
   </view>
 
   <view class="phone">
-    <text bindtap="showModal">黄老师</text>
-    <text bindtap="showModal">187 5422 8965</text>
+    
     <text>南宁市西乡塘区科园大道31号财智时代13楼B座</text>
   </view>
 
@@ -39,4 +38,4 @@
     <text class="phoneNum">18754228965</text>
     <text class="lasttext" bindtap="hideModal">...收缩</text>
   </view>
-</view>
+</view> 

@@ -287,16 +287,50 @@ Page({
 
   // 提交
   submit: function (e) {
+
+    wx.navigateTo({
+      url: '../ending/ending'
+    })
+
     var name = this.data.name;  // 获取name
     var phone = this.data.phone;  // 获取phone
     var index = this.data.index;  // 获取学校
     var index2 = this.data.index2; // 获取层次
     var index3 = this.data.index3;  // 获取专业
-    var index4 = this.data.multiIndex[0]; // 获取区域    
+    var index4 = this.data.multiIndex; // 获取区域    
+    //  学校
+    var school = this.data.objectArray[index];
+    var level = this.data.objectKindArray[index2];
+    var major = this.data.objectProfessArray[index3];
+    var parentArea = this.data.objectMultiArray[0];
+    var parent = parentArea[index4[0]];
+    var sonArea = this.data.objectMultiArray[1];
+    var son = sonArea[index4[1]];  
+    var areaId = parent.id;
+    if(!son){
+        areaId = son.id;
+    }
 
-    wx.navigateTo({
-      url: '../ending/ending'
-    })
+  wx.request({
+    url: util.url +'/wxaccess/promotion/add',
+    data:{
+      name: name,
+      phone:phone,
+      schoolId:school.id,
+      levelId:level.id,
+      majorId:major.id,
+      areaId:areaId
+    },
+    dataType:'json',
+    method:'post',
+    success:function(res){
+
+    }
+  })
+
+
+
+
 
     // 数据校验
     if (index == "0" || index2 == "0" || index3 =="0" || name=="" || phone=="" || index4=="0") {

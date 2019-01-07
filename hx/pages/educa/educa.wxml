@@ -45,7 +45,7 @@
     <view class="inforview">
       <label>手机</label>
       <view class="picker">
-        <input type="number" maxlength="11" placeholder="请输入手机号码" name="phone" bindinput='getPhone'></input>
+        <input type="number" maxlength="11" placeholder="请输入手机号码" name="phone" bindinput='getPhone'></input>   
       </view>
     </view>  
     <view class="inforview">

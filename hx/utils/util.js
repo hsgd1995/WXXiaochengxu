@@ -1,6 +1,7 @@
-//const url = 'https://www.hsgd1995.xyz/PEIXUN';
-const url = 'http://www.localhost/PEIXUN';
-const domain = 'http://www.localhost';
+const url = 'https://www.hsgd1995.xyz/PEIXUN';
+//const url = 'http://www.localhost/PEIXUN';
+//const domain = 'http://www.localhost';
+const domain = 'https://www.hsgd1995.xyz';
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
