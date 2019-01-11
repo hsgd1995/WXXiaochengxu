@@ -9,7 +9,7 @@
   </view>
 
   <view class="filedcont">
-    <text bindtap="showModal">点击查看钦州区域联系方式</text>
+    <text bindtap="showModal">点击查看{{areaName}}区域联系方式</text>
   </view>
 
   <view class="phone">
@@ -26,16 +26,14 @@
 <view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
   <!-- 点击遮罩层关闭弹框 -->
   <view class="modals-cancel" bindtap="hideModal"></view>
-  <view class="schintro bottom-pos" animation="{{animationData}}">
-    <!-- <view class="closeBtn">&#10005</view> -->
-    <text>黄老师</text>
-    <text class="phoneNum">18754228965</text>
-    <text>黄老师</text>
-    <text class="phoneNum">18754228965</text>
-    <text>黄老师</text>
-    <text class="phoneNum">18754228965</text>
-    <text>黄老师</text>
-    <text class="phoneNum">18754228965</text>
+  <view class="schintro bottom-pos" animation="{{animationData}}"> 
+    <!-- <view class="closeBtn">&#10005</view> --> 
+    <text>{{message}}</text>
+    <!-- 循环数据 -->
+    <block  wx:for="{{tacherList}}" wx:for-item="item" wx:for-index="idx"> 
+      <text>{{item.teacherName}}</text>
+      <text class="phoneNum">{{item.phone}}</text>
+    </block> 
     <text class="lasttext" bindtap="hideModal">...收缩</text>
   </view>
 </view> 

@@ -5,10 +5,10 @@
     <view class="hideview {{showView ? 'viewhide' : 'viewshow'}}">
       <view class="hidecont" bindtap="showModal">
         <view class="cerimg">
-          <image src="../images/certificate.png"></image>
+          <image src="{{typeImg}}"></image>
         </view>
         <view class="intrcon">
-          <text>教师资格证是教育行业从业教师的许可证。在我国，师范类大学毕业生须在学期期末考试中通过学校开设的教育学和教育心理学课程考试，并且要在全省统一组织的普通话考试中成绩达到二级乙等（中文专业为二级甲等）以上，方可在毕业时领取教师资格证。非师范类和其他社会人员需要在社会上参加认证考试等一系列测试后才能申请教师资格证。 [1]</text> 
+          <text>{{typeContent}}</text> 
         </view>
         <view class="lasttext"><text>...展开</text></view>
       </view>
@@ -18,15 +18,15 @@
   <!-- 报名信息 -->
   <view class="inforlist">
     <view class="inforview except">
-      <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{kind}}">
+      <picker bindchange="bindPickerChange2" range-key="name" range="{{tyepObjectArray}}">
         <label>类型</label>
-        <view class="picker">{{kind[index2]}}</view>
+        <view class="picker">{{tyepObjectArray[index2].name}}</view>
       </picker>
     </view>
     <view class="inforview">
-      <picker bindchange="bindPickerChange3" value="{{index3}}" range="{{level}}">
+      <picker bindchange="bindPickerChange3" range-key="levelName" range="{{levelObjectArray}}">
         <label>层次</label>
-        <view class="picker">{{level[index3]}}</view>
+        <view class="picker">{{levelObjectArray[index3].levelName}}</view>
       </picker>
     </view>
     <view class="inforview">
@@ -42,10 +42,10 @@
       </view>
     </view>  
     <view class="inforview">
-      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" range-key="name" range="{{objectMultiArray}}">
         <label>区域</label>
         <view class="picker">
-          {{ multiArray[0][multiIndex[0]] }}{{ multiArray[1][multiIndex[1]] }}
+          {{ objectMultiArray[0][multiIndex[0]].name }}{{ objectMultiArray[1][multiIndex[1]].name }}
         </view>
       </picker>
     </view>
@@ -58,20 +58,21 @@
   </view>
 </view>
 
-<!-- 弹出内容 -->
+<!-- 钦州学院弹框 -->
 <view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
   <view class="modals-cancel" bindtap="hideModal"></view>
-    <view class="schintro bottom-pos" animation="{{animationData}}">
-      <view class="leftimg">
-        <image src='../images/certificate.png'></image>
-      </view>
-      <view class="righttext">
-        <text>教师资格证是教育行业从业教师的许可证。在我国，师范类大学毕业生须在学期期末考试中通过学校开设的教育学和教育心理学课程考试，并且要在全省统一组织的普通话考试中成绩达到二级乙等（中文专业为二级甲等）以上，方可在毕业时领取教师资格证。非师范类和其他社会人员需要在社会上参加认证考试等一系列测试后才能申请教师资格证。 [1]</text> 
-        <text>2015年，教师资格证考试改革正式实施，打破教师终生制且五年一审，改革后将实行国考，考试内容增加、难度加大。在校专科，本科能报考。改革后将不再分师范生和非师范生的区别，想要做教师都必须参加国家统一考试，方可申请教师资格证。
-         </text>
-        <text class="lasttext" bindtap="hideModal">...收缩</text>
-      </view>
+  <view class="schintro bottom-pos" animation="{{animationData}}">
+    <view class="leftimg">
+      <image src='{{typeImg}}'></image>
     </view>
+    <view class="righttext">
+    <text> 
+     {{typeContent}}
+    </text>
+      <text class="lasttext" bindtap="hideModal">...收缩</text>
+    </view>
+  </view>
 </view>
+
 
 

@@ -1,16 +1,53 @@
+var util = require('../../utils/util.js');
+var pageThis = null;
 Page({
 
   data: {
+    tacherList: [],
+    areaName:'',
+    message:'',
     // 弹出框的js
     hideModal: true,
     animationData: {}  //这个未解之谜
   },
+  //加载页面
+  onLoad: function (options) {
+    pageThis = this;
+    console.log(options.areaId);
+    console.log(options.areaName);
+    this.setData({
+      areaName: options.areaName
+    });
+   
+    var tacherList = new Array();
+    wx.request({
+      url: util.url+'/wxaccess/teacher/getTeacherByAreaId',
+      data: { areaId: options.areaId}, 
+      dataType: 'json',
+      method: 'get',
+      success:function(res){
+        var message = '';
+        tacherList = res.data; 
+        if(res.data.length<1){
+          message='该区域没有老师';
+        }
+        pageThis.setData({ 
+          tacherList: tacherList,
+          message: message
+        });
+      }
+    })
+
+    
+
+  },
 
   // 显示遮罩层
   showModal: function () {
+    
     var that = this;
     that.setData({
-      hideModal: false
+      hideModal: false,
     })
     var animation = wx.createAnimation({
       duration: 400,

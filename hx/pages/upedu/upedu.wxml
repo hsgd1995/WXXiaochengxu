@@ -3,18 +3,35 @@
     <text class="plan-title">选择您的专属提升方案</text>
   </view>
   <scroll-view class="scroll-tab" scroll-x="true">
+  <!-- 
     <view class="scroll-tab-item tab1 {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
        广播电视大学
     </view>
     <view class="scroll-tab-item tab2 {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
-      函数教育
+      函数教育 
     </view>
     <view class="scroll-tab-item tab3 {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">
       网络教育
     </view>
+ -->
+    <!-- 循环数据 -->
+    <block  wx:for="{{typeList}}" wx:for-item="item" wx:for-index="idx"> 
+    <view class="scroll-tab-item tab{{idx+1}} {{scrollViewNo==idx?'active':''}}" data-current="{{idx}}" bindtap="clickTab">
+      {{item.name}}
+    </view>
+     </block> 
   </scroll-view>
-  <swiper class="swiper-box" indicator-dots="{{indicatorDots}}" current="{{currentTab}}"  duration="300"  bindchange="swiperTab">
+  <swiper class="swiper-box" indicator-dots="{{indicatorDots}}" current="{{swiperNo}}"  duration="300"  bindchange="swiperTab">
+
+  <block  wx:for="{{typeList}}" wx:for-item="item" wx:for-index="idx"> 
     <swiper-item>
+      <view class="textView">
+        <text> {{item.content}}</text>
+        
+      </view>
+    </swiper-item>
+     </block> 
+    <!--<swiper-item>
       <view class="textView">
         <text>函授是成人高等教育的一种学习形式，其通过国家统一的成人高考被高校录取，发放录取通知书，属国民教育系列，国家承认学历，参加全国成人高考招生统一考试，各省、自治区统一组织录取。</text>
         <text>特点：</text>
@@ -25,25 +42,13 @@
     </swiper-item>
     <swiper-item>
       <view class="textView">
-        <text>函授是成人高等教育的一种学习形式，其通过国家统一的成人高考被高校录取，发放录取通知书，属国民教育系列，国家承认学历，参加全国成人高考招生统一考试，各省、自治区统一组织录取。</text>
-        <text>特点：</text>
-        <text>函授只有两种学历，分别是函授专科学历和本科学历。</text>
-        <text>函授学历就是成人高等教育学历，符合招考院校的条件可以考研。</text>
-        <text>函授学历与网络教育、国家开放大学学历一样，都属于成人高等教育学历，国家承认、电子注册、网络可查。</text>
+        <text>网络教育</text>
       </view>
-    </swiper-item>
-    <swiper-item>
-      <view class="textView">
-        <text>函授是成人高等教育的一种学习形式，其通过国家统一的成人高考被高校录取，发放录取通知书，属国民教育系列，国家承认学历，参加全国成人高考招生统一考试，各省、自治区统一组织录取。</text>
-        <text>特点：</text>
-        <text>函授只有两种学历，分别是函授专科学历和本科学历。</text>
-        <text>函授学历就是成人高等教育学历，符合招考院校的条件可以考研。</text>
-        <text>函授学历与网络教育、国家开放大学学历一样，都属于成人高等教育学历，国家承认、电子注册、网络可查。</text>
-      </view>
-    </swiper-item>
+    </swiper-item> 
+    -->
   </swiper>
   <view class="bottomText">
-    <text>您当前方案  函授教育</text>
+    <text>您当前方案  {{typeName}}</text>
   </view>
   <view class="btnView">
     <button bindtap="educa">进入</button>
